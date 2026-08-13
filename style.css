@@ -15,31 +15,23 @@
 body {
   margin: 0;
   min-height: 100vh;
+  padding: 24px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  padding: 24px;
-
   background:
-    radial-gradient(
-      circle at top,
-      #252525 0%,
-      var(--bg) 45%
-    );
+    radial-gradient(circle at top, #252525 0%, #0b0b0b 55%);
 
   color: var(--text);
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* MAIN CARD */
+/* CARD */
 
 .card {
   width: min(100%, 430px);
@@ -48,15 +40,14 @@ body {
 
   text-align: center;
 
-  background:
-    rgba(21, 21, 21, 0.96);
+  background: #151515;
 
-  border: 1px solid var(--border);
+  border: 1px solid #2a2a2a;
 
   border-radius: 24px;
 
   box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.45);
+    0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -66,18 +57,17 @@ body {
   margin-bottom: 35px;
 
   font-size: 24px;
-
   font-weight: 900;
 
   letter-spacing: 3px;
 }
 
 .logo span {
-  color: var(--accent);
+  color: #f5c400;
 }
 
 
-/* ICON */
+/* STAR */
 
 .icon {
   width: 58px;
@@ -86,21 +76,19 @@ body {
   margin: 0 auto 18px;
 
   display: grid;
-
   place-items: center;
 
   border-radius: 50%;
 
-  background:
-    rgba(245, 196, 0, 0.12);
+  background: rgba(245, 196, 0, 0.12);
 
-  color: var(--accent);
+  color: #f5c400;
 
   font-size: 28px;
 }
 
 
-/* HEADINGS */
+/* TITLE */
 
 h1 {
   margin: 0 0 12px;
@@ -111,18 +99,18 @@ h1 {
 }
 
 
-/* TEXT */
+/* DESCRIPTION */
 
-p {
+section > p:not(.survey-note) {
   margin: 0 auto 25px;
 
-  color: var(--muted);
+  color: #a8a8a8;
 
   line-height: 1.55;
 }
 
 
-/* BUTTONS */
+/* BOTH BUTTONS */
 
 .button,
 .survey-button {
@@ -132,8 +120,6 @@ p {
 
   padding: 17px 20px;
 
-  border: none;
-
   border-radius: 12px;
 
   text-decoration: none;
@@ -142,6 +128,8 @@ p {
 
   font-weight: 800;
 
+  cursor: pointer;
+
   transition:
     transform 0.15s ease,
     background 0.15s ease,
@@ -149,54 +137,61 @@ p {
 }
 
 
-/* GOOGLE REVIEW BUTTON */
+/* GOOGLE REVIEW */
 
 .primary {
-  background: var(--accent);
+  background: #f5c400;
 
   color: #111111;
+
+  border: none;
 }
 
 .primary:hover {
-  transform: translateY(-1px);
+  background: #ffd633;
 
-  background: var(--accent-hover);
+  transform: translateY(-2px);
 
   box-shadow:
-    0 8px 20px rgba(245, 196, 0, 0.2);
+    0 8px 22px rgba(245, 196, 0, 0.25);
 }
 
 
-/* $50 SURVEY BUTTON */
+/* $50 BUTTON */
 
 .survey-button {
   margin-top: 14px;
 
-  background: var(--accent);
+  background: #f5c400;
 
   color: #111111;
+
+  border: none;
+
+  box-shadow:
+    0 5px 15px rgba(245, 196, 0, 0.12);
 }
 
 .survey-button:hover {
-  transform: translateY(-1px);
+  background: #ffd633;
 
-  background: var(--accent-hover);
+  transform: translateY(-2px);
 
   box-shadow:
-    0 8px 20px rgba(245, 196, 0, 0.2);
+    0 8px 22px rgba(245, 196, 0, 0.25);
 }
 
 
-/* SURVEY SUBTEXT */
+/* SURVEY TEXT */
 
 .survey-note {
-  margin-top: 8px;
+  margin: 8px 0 0;
 
-  margin-bottom: 0;
+  color: #777777;
 
   font-size: 12px;
 
-  color: #777;
+  line-height: 1.4;
 }
 
 
@@ -205,13 +200,13 @@ p {
 footer {
   margin-top: 18px;
 
-  color: #666;
+  color: #666666;
 
   font-size: 12px;
 }
 
 
-/* MOBILE */
+/* PHONE */
 
 @media (max-width: 480px) {
 
