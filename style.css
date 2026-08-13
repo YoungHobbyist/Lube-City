@@ -24,12 +24,22 @@ body {
   padding: 24px;
 
   background:
-    radial-gradient(circle at top, #252525 0%, var(--bg) 45%);
+    radial-gradient(
+      circle at top,
+      #252525 0%,
+      var(--bg) 45%
+    );
 
   color: var(--text);
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 }
+
+
+/* MAIN CARD */
 
 .card {
   width: min(100%, 430px);
@@ -38,19 +48,25 @@ body {
 
   text-align: center;
 
-  background: rgba(21, 21, 21, 0.96);
+  background:
+    rgba(21, 21, 21, 0.96);
 
   border: 1px solid var(--border);
+
   border-radius: 24px;
 
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.45);
 }
 
+
+/* LOGO */
+
 .logo {
   margin-bottom: 35px;
 
   font-size: 24px;
+
   font-weight: 900;
 
   letter-spacing: 3px;
@@ -60,6 +76,9 @@ body {
   color: var(--accent);
 }
 
+
+/* ICON */
+
 .icon {
   width: 58px;
   height: 58px;
@@ -67,23 +86,32 @@ body {
   margin: 0 auto 18px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 50%;
 
-  background: rgba(245, 196, 0, 0.12);
+  background:
+    rgba(245, 196, 0, 0.12);
 
   color: var(--accent);
 
   font-size: 28px;
 }
 
+
+/* HEADINGS */
+
 h1 {
   margin: 0 0 12px;
 
   font-size: 32px;
+
   line-height: 1.1;
 }
+
+
+/* TEXT */
 
 p {
   margin: 0 auto 25px;
@@ -93,68 +121,86 @@ p {
   line-height: 1.55;
 }
 
-.button {
+
+/* BUTTONS */
+
+.button,
+.survey-button {
   display: block;
 
   width: 100%;
 
   padding: 17px 20px;
 
+  border: none;
+
   border-radius: 12px;
 
   text-decoration: none;
 
   font-size: 17px;
+
   font-weight: 800;
 
   transition:
     transform 0.15s ease,
-    background 0.15s ease;
+    background 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
-.button:hover {
-  transform: translateY(-1px);
-}
+
+/* GOOGLE REVIEW BUTTON */
 
 .primary {
   background: var(--accent);
+
   color: #111111;
 }
 
 .primary:hover {
+  transform: translateY(-1px);
+
   background: var(--accent-hover);
+
+  box-shadow:
+    0 8px 20px rgba(245, 196, 0, 0.2);
 }
 
-.small {
-  margin-top: 16px;
+
+/* $50 SURVEY BUTTON */
+
+.survey-button {
+  margin-top: 14px;
+
+  background: var(--accent);
+
+  color: #111111;
+}
+
+.survey-button:hover {
+  transform: translateY(-1px);
+
+  background: var(--accent-hover);
+
+  box-shadow:
+    0 8px 20px rgba(245, 196, 0, 0.2);
+}
+
+
+/* SURVEY SUBTEXT */
+
+.survey-note {
+  margin-top: 8px;
+
   margin-bottom: 0;
 
-  font-size: 13px;
-}
-
-.text-button {
-  margin-top: 25px;
-
-  padding: 8px;
-
-  border: 0;
-
-  background: transparent;
+  font-size: 12px;
 
   color: #777;
-
-  cursor: pointer;
-
-  font-size: 13px;
 }
 
-.text-button:hover {
-  color: #aaa;
-}
 
-.hidden {
-  display: none;
-}
+/* FOOTER */
 
 footer {
   margin-top: 18px;
@@ -164,66 +210,27 @@ footer {
   font-size: 12px;
 }
 
-.survey-button {
-  display: block;
-  width: 100%;
-  margin-top: 14px;
-  padding: 15px 20px;
 
-  border: 1px solid var(--accent);
-  border-radius: 12px;
+/* MOBILE */
 
-  color: var(--accent);
-  background: transparent;
+@media (max-width: 480px) {
 
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 800;
+  body {
+    padding: 16px;
+  }
 
-  transition: 0.15s ease;
-}
+  .card {
+    padding: 32px 22px 26px;
 
-.survey-button:hover {
-  background: var(--accent);
-  color: #111;
-}
+    border-radius: 20px;
+  }
 
-.survey-note {
-  margin-top: 8px;
-  margin-bottom: 0;
+  h1 {
+    font-size: 29px;
+  }
 
-  font-size: 12px;
-  color: #777;
-}
+  .logo {
+    margin-bottom: 30px;
+  }
 
-.survey-button {
-  display: block;
-  width: 100%;
-  margin-top: 14px;
-  padding: 15px 20px;
-
-  border: 1px solid var(--accent);
-  border-radius: 12px;
-
-  color: var(--accent);
-  background: transparent;
-
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 800;
-
-  transition: 0.15s ease;
-}
-
-.survey-button:hover {
-  background: var(--accent);
-  color: #111;
-}
-
-.survey-note {
-  margin-top: 8px;
-  margin-bottom: 0;
-
-  font-size: 12px;
-  color: #777;
 }
